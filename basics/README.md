@@ -1,1 +1,3 @@
-"Shell"
+#!/bin/bash
+$ /shell/basics/README.md
+ $
