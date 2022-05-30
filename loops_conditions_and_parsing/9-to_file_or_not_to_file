@@ -11,18 +11,18 @@
 #if the file is a regular file: school is a regular file
 #if the file is not a regular file: (nothing)
 
-FSchool=school
 
-if  [ -e "$FSchool" ] 
+
+if  [ -e "school" ] 
  then
-      echo "school file exist"   
-  if [ ! -s "$FSchool" ]
+      echo "school file exists"   
+  if [ -s "school" ]
   then 
-     echo "school file is empty"
-  else 
      echo "school file is not empty"
+  else 
+     echo "school file is empty"
     fi
-    if [ -f "$FSchool" ]
+    if [ -f "school" ]
     then 
      echo "school is a regular file"
    fi
