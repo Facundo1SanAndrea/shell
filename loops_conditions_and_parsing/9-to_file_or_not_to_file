@@ -14,32 +14,18 @@
 FSchool=school
 
 if  [ -e "$FSchool" ] 
- 
-  then
-    
-     echo "school file exist"
-      
-  if [ -s "$FSchool" ]
-
+ then
+      echo "school file exist"   
+  if [ ! -s "$FSchool" ]
   then 
-
      echo "school file is empty"
-
   else 
-    
      echo "school file is not empty"
-
     fi
-
     if [ -f "$FSchool" ]
-
     then 
-
      echo "school is a regular file"
-
-    fi
-
+   fi
 else 
-   
     echo "school file does not exist"
 fi
