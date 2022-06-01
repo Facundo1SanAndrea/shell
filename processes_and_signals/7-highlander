@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#Bash script that displays
+
+i=0
+
+while ( $i -eq 0 )
+
+do
+
+   echo "To infinity and beyond"
+  
+   trap "I am invincible!!!"
+
+   SIGTERM
+
+done 
