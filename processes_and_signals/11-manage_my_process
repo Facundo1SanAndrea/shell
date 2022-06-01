@@ -12,7 +12,7 @@ elif { $N == "stop" }
 
 elif { $N == "restart" }
 
- sudo kill ./11-manage_my_process | rm /var/run/my_process.pid | ./11-/var/run/my_process.pid | touch /var/run/my_process.pid | echo "manage_my_process restarted"
+ sudo kill ./11-manage_my_process | rm /var/run/my_process.pid | ./11-/var/run/my_process.pid | touch -type -f /var/run/my_process.pid | echo "manage_my_process restarted"
 
 else 
 
