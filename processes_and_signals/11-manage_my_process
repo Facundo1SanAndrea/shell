@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 #Write Bash (init) script 11-manage_my_process that manages manage_my_process. (both files need to be pushed to git)
 
-if [ "${N}" == "start" ]
+if [ "${1}" == "start" ]
 then
 
  sudo ./11-manage_my_process & touch -type -f /var/run/my_process.pid & echo "'manage_my_process started'"
 
-elif [ "${N}" == "stop" ]
+elif [ "${1}" == "stop" ]
 then
 
  sudo kill ./11-manage_my_process & rm -type -f /var/run/my_process.pid & echo "'manage_my_process stopped'"
 
-elif [ "${N}" == "restart" ]
+elif [ "${1}" == "restart" ]
 then
 
  sudo kill ./11-manage_my_process & rm -type -f /var/run/my_process.pid & ./11-/var/run/my_process.pid & touch -type -f /var/run/my_process.pid && echo "manage_my_process restarted"
