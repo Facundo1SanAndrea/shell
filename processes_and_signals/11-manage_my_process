@@ -4,15 +4,15 @@
 if { $N == "start" }
 then
 
- sudo ./11-manage_my_process | touch -type -f /var/run/my_process.pid | echo "manage_my_process started"
+ sudo ./11-manage_my_process && touch -type -f /var/run/my_process.pid && echo "'manage_my_process started'"
 
 elif { $N == "stop" }
 
- sudo kill ./11-manage_my_process | rm -type -f /var/run/my_process.pid | echo "manage_my_process stopped"
+ sudo kill ./11-manage_my_process && rm -type -f /var/run/my_process.pid && echo "'manage_my_process stopped'"
 
 elif { $N == "restart" }
 
- sudo kill ./11-manage_my_process | rm -type -f /var/run/my_process.pid | ./11-/var/run/my_process.pid | touch -type -f /var/run/my_process.pid | echo "manage_my_process restarted"
+ sudo kill ./11-manage_my_process && rm -type -f /var/run/my_process.pid && ./11-/var/run/my_process.pid && touch -type -f /var/run/my_process.pid && echo "manage_my_process restarted"
 
 else 
 
