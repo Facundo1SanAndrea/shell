@@ -26,6 +26,6 @@ then
 
 else 
 
- echo "Usage: manage_my_process {start|stop|restart}"
+ echo "Usage: manage_my_process '{start|stop|restart}'"
  
 fi
