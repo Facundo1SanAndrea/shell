@@ -11,15 +11,15 @@ then
 elif [ "${1}" == "stop" ]
 then
 
-sudo kill "$( cat ./11-manage_my_process )" & 
- rm -type -f /var/run/my_process.pid & 
+sudo kill  ./11-manage_my_process  & 
+ rm -type -f "$( cat /var/run/my_process.pid )" & 
  echo "'manage_my_process stopped'"
 
 elif [ "${1}" == "restart" ]
 then
 
-sudo kill "$( cat ./11-manage_my_process )" & 
- rm -type -f /var/run/my_process.pid & 
+sudo kill ./11-manage_my_process & 
+ rm -type -f "$( cat /var/run/my_process.pid )" & 
  ./11-/var/run/my_process.pid & 
  touch -type -f /var/run/my_process.pid & 
  echo "manage_my_process restarted"
