@@ -4,22 +4,21 @@
 if [ "${1}" == "start" ]
 then
 
- sudo ./11-manage_my_process & 
+ ./11-manage_my_process & 
  touch -type -f /var/run/my_process.pid 
- echo " ${1} == ./11-manage_my_process "
  echo "manage_my_process started" &
 
 elif [ "${1}" == "stop" ]
 then
 
-sudo kill  ./11-manage_my_process &
+ kill  ./11-manage_my_process &
  rm -type -f "$( cat /var/run/my_process.pid )" 
  echo "manage_my_process stopped" &
 
 elif [ "${1}" == "restart" ]
 then
 
-sudo kill ./11-manage_my_process &
+ kill ./11-manage_my_process &
  rm -type -f "$( cat /var/run/my_process.pid )"
  ./11-/var/run/my_process.pid &
  touch -type -f "$( cat /var/run/my_process.pid )" 
