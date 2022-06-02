@@ -12,14 +12,14 @@ then
 elif [ "${1}" == "stop" ]
 then
 
-kill  $( cat etc/init.d/manage_my_process ) stop  &
+kill  ( cat etc/init.d/manage_my_process ) stop  &
  rm -type -f /var/run/my_process.pid  
  echo "manage_my_process stopped"
 
 elif [ "${1}" == "restart" ]
 then
 
-kill $( cat etc/init.d/manage_my_process ) restart &
+kill ( cat etc/init.d/manage_my_process ) restart &
  rm -type -f /var/run/my_process.pid
  ./11-/var/run/my_process.pid &
  touch -type -f  /var/run/my_process.pid
