@@ -23,10 +23,11 @@ kill "$( cat /var/run/my_process.pid )"  &
  rm -type -f /var/run/my_process.pid
  ./11-/var/run/my_process.pid &
  touch -type -f  /var/run/my_process.pid
+ echo $$ > /var/run/my_process.pid
  echo "manage_my_process restarted" 
 
 else 
 
-echo "Usage: $(manage_my_process) {start|stop|restart}"
+echo "Usage: manage_my_process {start|stop|restart}"
  
 fi
