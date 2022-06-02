@@ -12,7 +12,7 @@ then
 elif [ "${1}" == "stop" ]
 then
 
- kill -KILL  "$( pgrep -f manage_my_process )"
+ kill -KILL  "$( cat "/var/run/my_process.pid" )"
  rm /var/run/my_process.pid
  echo "manage_my_process stopped"
 
